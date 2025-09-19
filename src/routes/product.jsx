@@ -10,14 +10,24 @@ const Product = () => {
         axios.get("https://68b6da3a73b3ec66cec2ef52.mockapi.io/Asaxiy/todo").then((res) => setData(res.data)).catch((err) =>console.log(err));
     }, [id])
   return (
-    <div>
+    <div className='bg-[#000000] p-[2rem] w-full'>
         {data.map((val) => {
             if(val.id ==id){
                 return (
-                    <div className='w-[40%] text-white'>
-                        <h1>{val.title}</h1>
+                    <div className='w-[70%]  text-white flex flex-col gap-[1rem]'>
+                        <img src={val.image} className='rounded-[10px]' alt="" />
+                        <div className='flex '>
+                            <span>{val.like}
+                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.77 7H11.54L13.06 2.06C13.38 1.03 12.54 0 11.38 0C10.8 0 10.24 0.24 9.86 0.65L4 7H0V17H4H5H14.43C15.49 17 16.41 16.33 16.62 15.39L17.96 9.39C18.23 8.15 17.18 7 15.77 7ZM4 16H1V8H4V16ZM16.98 9.17L15.64 15.17C15.54 15.65 15.03 16 14.43 16H5V7.39L10.6 1.33C10.79 1.12 11.08 1 11.38 1C11.64 1 11.88 1.11 12.01 1.3C12.08 1.4 12.16 1.56 12.1 1.77L10.58 6.71L10.18 8H11.53H15.76C16.17 8 16.56 8.17 16.79 8.46C16.92 8.61 17.05 8.86 16.98 9.17Z" fill="white"/>
+                                </svg>
+                            </span>
+                        </div>
+                        <h1 className='text-[1.5rem] font-bold'>{val.title}</h1>
                         <p>{val.description}</p>
-                        <img src={val.image} alt="" />
+                        <div>
+                            <span>{val.time}</span>
+                        </div>
                     </div>
                 )
             }
