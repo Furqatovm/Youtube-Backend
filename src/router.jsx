@@ -5,7 +5,7 @@ import Explore from './components/main-layout/explore'
 import Home from './components/home/home'
 import Product from './routes/product'
 
-const App = () => {
+const Router = () => {
 
   return (
     <div className='bg-[#212121]'>
@@ -19,8 +19,9 @@ const App = () => {
         <Route path='*' element={<h1>Not found</h1>} />
       </Routes>
     </div>
+    
     // dlakdlakldlkakldkla
   )
 }
 
-export default App
+export default Router
