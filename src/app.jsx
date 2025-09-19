@@ -1,16 +1,18 @@
 import React from 'react'
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, useParams } from "react-router-dom"
 import Mainlayout from './components/main-layout'
 import Explore from './components/main-layout/explore'
 import Home from './components/home/home'
+import Product from './routes/product'
 
 const App = () => {
+
   return (
     <div className='bg-[#212121]'>
       <Routes>
         <Route path='/' element={<Mainlayout />}>
           <Route index element={<Home />} />
-
+            <Route path={`/about/:id`}  element={<Product />}/>
           <Route path='/explore' element={<Explore />} />
         </Route>
 
