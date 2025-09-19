@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({image, title, description, like, name, time, duration}) => {
+const Card = ({image, title,  like, name, time, duration}) => {
   return (
     <div>
         <div className='relative'>

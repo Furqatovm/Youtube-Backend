@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, useParams } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import Mainlayout from './components/main-layout'
 import Explore from './components/main-layout/explore'
 import Home from './components/home/home'
